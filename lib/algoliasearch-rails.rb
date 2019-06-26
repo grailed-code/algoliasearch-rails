@@ -763,7 +763,7 @@ module AlgoliaSearch
                    index_settings.delete(:slaves) ||
                    index_settings.delete('slaves')
         index_settings[used_slaves ? :slaves : :replicas] = replicas unless replicas.nil? || options[:inherit]
-        @algolia_indexes[settings].set_settings(index_settings, { forwardToReplicas: true })
+        #@algolia_indexes[settings].set_settings(index_settings, { forwardToReplicas: true })
       end
 
       @algolia_indexes[settings]
